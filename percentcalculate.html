@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fabric Price Conversion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+.box {
+  background-color: #e5e5e5; /* Replace with your desired background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.box:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Adjust the height of the box based on the content inside */
+.box-content {
+  height: 100%; /* Adjust the height based on your needs */
+  /* Add any additional styles or customization for the box here */
+}
+
+.form-control {
+  background-color: #e5ffff;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* Adjust the width to your desired value */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed */
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem; /* Adjust the padding as needed */
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1.25rem; /* Adjust the font size as needed */
+  }
+}
+
+
+</style>	 
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+<nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+  <div class="container">
+    <div class="navbar-brand-wrapper d-flex w-100">
+      <a class="navbar-brand" href="index">
+        <img src="images/Group2.svg" alt="Logo">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+          <div class="navbar-collapse-logo">
+            <a class="navbar-brand" href="index">
+              <img src="images/Group2.svg" alt="Logo">
+            </a>
+          </div>
+          <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features-section">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="calculatorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="calculatorDropdown">
+            <a class="dropdown-item" href="fabricconverter">Fabric Converter</a>
+            <a class="dropdown-item" href="PriceConverter">Fabric Price Converter</a>
+            <a class="dropdown-item" href="gsmcalculate">GSM Converter</a>
+            <a class="dropdown-item" href="unitconverter">Unit Converter</a>
+            <a class="dropdown-item" href="cartoncalc">Carton Calculator</a>
+            <a class="dropdown-item" href="zippercalc">Zipper Calculation</a>
+			<a class="dropdown-item" href="knittopconsumption">Consumption Calculation</a>
+			<a class="dropdown-item" href="cmcalculation">CM Calculation</a>
+			<a class="dropdown-item" href="percentcalculate">Percentage Difference</a>
+            <!-- Add more dropdown items as needed -->
+          </div>
+        </li>
+        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+          <!-- Add a button or link for contact us if desired -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class ="container">
+
+<div class="text-center">
+	<h1>Percent Calculation</h1>
+</div>
+
+<div class="container my-3">
+  <div class="row">
+    <div class="col-md-6 my-2">
+      <div class="box">
+        <div class="box-content">
+          <div class="d-flex flex-column justify-content-between h-100">
+            <div class="text-center">
+              <h1>Percentage Difference</h1>
+			  
+			  <p class="text-left"><b>Formula: </b><br> Percentage Difference = ((Value 2 - Value 1) / Value 1) * 100<br><br>
+			  
+              <div class="form-group">
+                <label for="value1">Value 1:</label>
+                <input type="number" id="value1" class="form-control">
+                <label for="value2">Value 2:</label>
+                <input type="number" id="value2" class="form-control">
+              </div>
+			  <div class="form-group">
+                <label for="result">Percentage Difference</label>
+                <input type="text" class="form-control" id="result" readonly>
+              </div>
+			  
+              <button onclick="calculatePercentageDifference()" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 my-2">
+      <div class="box">
+        <div class="box-content">
+          <div class="d-flex flex-column justify-content-between h-100">
+            <div class="text-center">
+              <h1>Find Percentage of...</h1>
+			   
+			  <p class="text-left"><b>Formula: </b><br> Percentage = (Value 2 / Value 1) * 100<br><br>
+              <div class="form-group">
+                <label for="value3">Total Value:</label>
+                <input type="number" id="value3" class="form-control">
+                <label for="value4">Percentage Value</label>
+                <input type="number" id="value4" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="result2">Percentage of</label>
+                <input type="text" class="form-control" id="result2" readonly>
+              </div>
+              <button onclick="calculatePercentage()" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  function calculatePercentageDifference() {
+    var value1 = parseFloat(document.getElementById("value1").value);
+    var value2 = parseFloat(document.getElementById("value2").value);
+
+    if (isNaN(value1) || isNaN(value2)) {
+      document.getElementById("result").value = "Please enter valid numbers.";
+    } else {
+      var difference = value2 - value1;
+      var percentageDifference = (difference / value1) * 100;
+      var result = "The percentage difference is " + percentageDifference.toFixed(2) + "%";
+      document.getElementById("result").value = result;
+    }
+  }
+
+  function calculatePercentage() {
+    var value3 = parseFloat(document.getElementById("value3").value);
+    var value4 = parseFloat(document.getElementById("value4").value);
+
+    if (isNaN(value3) || isNaN(value4)) {
+      document.getElementById("result2").value = "Please enter valid numbers.";
+    } else {
+      var percentage = (value4 / value3) * 100;
+      var result2 = "The percentage is " + percentage.toFixed(2) + "%";
+      document.getElementById("result2").value = result2;
+    }
+  }
+</script>
+
+ <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/Group2.svg" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0"></p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="KgYardKg"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright © 2023<a href="https://www.bootstrapdash.com/" class="px-1">Bootstrapdash.</a>All rights reserved.</p>
+      </footer>  
+ </div>
+   </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+
+</body>
+</html>

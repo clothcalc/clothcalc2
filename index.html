@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+  <title>Apparel Merchandising Calculation</title>
+  
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8J4KQR');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+
+
+.box {
+    background-color: #e5e5e5; /* Replace with your desired background color */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100%;
+  }
+  
+  /* Optional: Adjust the height of the box based on the content inside */
+  .box-content {
+    height: calc(100% - 40px);
+    /* Replace 40px with the sum of padding and margin values if you adjust the padding or margin of the box */
+    /* Add any additional styles or customization for the box here */
+  }
+
+.btn-primary:hover a.text-white {
+    color: black;
+  }
+
+
+</style>
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+<nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+  <div class="container">
+    <div class="navbar-brand-wrapper d-flex w-100">
+      <a class="navbar-brand" href="index">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+          <div class="navbar-collapse-logo">
+            <a class="navbar-brand" href="index">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </div>
+          <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="calculatorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="calculatorDropdown">
+            <a class="dropdown-item" href="fabricconverter">Fabric Converter</a>
+            <a class="dropdown-item" href="PriceConverter">Fabric Price Converter</a>
+            <a class="dropdown-item" href="gsmcalculate">GSM Converter</a>
+            <a class="dropdown-item" href="unitconverter">Unit Converter</a>
+            <a class="dropdown-item" href="cartoncalc">Carton Calculator</a>
+            <a class="dropdown-item" href="zippercalc">Zipper Calculation</a>
+			<a class="dropdown-item" href="knittopconsumption">Consumption Calculation</a>
+			<a class="dropdown-item" href="cmcalculation">CM Calculation</a>
+			<a class="dropdown-item" href="percentcalculate">Percentage Difference</a>
+            <!-- Add more dropdown items as needed -->
+          </div>
+        </li>
+        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+          <!-- Add a button or link for contact us if desired -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+ 
+</header>
+
+  <div class="banner" >
+    <div class="container">
+      <h1 class="font-weight-semibold">Apparel Merchandising Calculation <br> in one place.</h1>
+      <h6 class="font-weight-normal text-muted pb-3">Welcome to our amazing platform, where you'll discover the perfect blend of convenience and knowledge. Seamlessly calculate apparel measurements while immersing yourself in the captivating world of apparel calculation.</h6>
+      <div>
+        <button class="btn btn-opacity-light mr-1">Get started</button>
+        <a class="btn btn-opacity-success ml-1" href="about">Learn more</a>
+      </div><br>
+      <img src="images/Tape.jpeg" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="container">
+	
+	<!--
+      <section class="features-overview" id="features-section" >
+        <div class="content-header">
+          <h2>How does it works</h2>
+          <h6 class="section-subtitle text-muted">One theme that serves as an easy-to-use operational toolkit<br>that meets customer's needs.</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <img src="images/Group12.svg" alt="" class="img-icons">
+              <h5 class="py-3">Speed<br>Optimisation</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <a href="#"><p class="readmore-link">Readmore</p></a>  
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-center">
+            <div class="features-width">
+              <img src="images/Group7.svg" alt="" class="img-icons">
+              <h5 class="py-3">SEO and<br>Backlinks</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <a href="#"><p class="readmore-link">Readmore</p></a>
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-end">
+            <div class="features-width">
+              <img src="images/Group5.svg" alt="" class="img-icons">
+              <h5 class="py-3">Content<br>Marketing</h5>
+              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <a href="#"><p class="readmore-link">Readmore</p></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+	  -->
+		  
+ <div class="col-12 text-center pb-5">
+            <h2>All of our Calculator</h2>
+            <h6 class="section-subtitle text-muted">You can convert/calculate fabric, price, GSM etc.</h6>
+          </div>
+<div class="container my-3">
+  <div class="row">
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Fabric Converter</h4>
+       <p class="text-left"> 01. KG to Yard, from CM/Inch <br>
+        02. KG to Meter, from Cm/Inch <br>
+        03. Yard to KG, from Cm/Inch <br>
+		04. Meter to KG, from Cm/Inch
+      </p>
+   
+        <a href="fabricconverter" class="btn btn-primary">Click Here for Converter</a>
+
+    </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Fabric Price Converter</h4>
+		<p class="text-left">
+        01. Calculate fabric price from KG to Yard from width in Inch/CM <br>
+		02. Calculate fabric price from converted fabric If you know the converted yard/meter<br>
+      </p>
+      <a href="PriceConverter" class="btn btn-primary">Click Here for Converter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Unit Converter</h4>
+		<p class="text-left">
+        01. GSM to Oz <br>
+        02. Oz to GSM <br>
+		03. KG to LBS <br>
+		04. Meter to Yard to Inch to CM to MM<br>
+		05. MM to CM to Inch to Yard to Meter<br>
+	</p>
+	<a href="unitconverter" class="btn btn-primary">Click Here for Converter</a>
+     </div>
+	 </div>
+    </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>GSM Converter</h4>
+		<p class="text-left">
+        01. Calculate gsm from Width in inch/cm<br>
+		02. Calculate weight of the fabric from gsm
+	  </p>
+	 <a href="gsmcalculate" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Percentage Difference</h4>
+		<p class="text-left">
+        01. Calculate Percentage difference from two values<br>
+		02. Find out Percentage of... from two values<br>
+		
+	  </p>
+
+		<a href="percentcalculate" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Carton Calculation</h4>
+        <p class="text-left">
+		01. CBM Calculation from CM<br>
+		02. CBF Calculation from Inch<br>
+		03. Carton Consumption & Cost Calculator<br>
+		04. Dimensional Weight Calculator
+
+		
+		</p>
+	  	<a href="cartoncalc" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Apparel Zipper Length Calculation</h4>
+        <p class="text-left">
+		01. When the garments body length measure from HPS<br>
+		02. When the garments body length measure from CB<br>
+		03. When the garments have high neck and zipper goes up to high neck drop from bottom
+		
+		</p>
+	  	<a href="zippercalc" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Consumption Calculation</h4>
+        <p class="text-left">
+		01. Knit (top) Item Consumption
+		
+		</p>
+	  	<a href="knittopconsumption" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>CM Calculation</h4>
+        <p class="text-left">
+		01. CM Calculation
+		
+		</p>
+	  	<a href="cmcalculation" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+
+</div>	  
+</div>	  
+
+<!--
+      
+      <section class="digital-marketing-service" id="digital-marketing-section">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
+            <h3 class="m-0">We Offer a Full Range<br>of Digital Marketing Services!</h3>
+            <div class="col-lg-7 col-xl-6 p-0">
+              <p class="py-4 m-0 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+              <p class="font-weight-medium text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer</p>
+            </div>    
+          </div>
+          <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
+            <img src="images/Group1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-7 text-center flex-item grid-margin" data-aos="fade-right">
+            <img src="images/Group2.png" alt="" class="img-fluid">
+          </div>
+          <div class="col-12 col-lg-5 flex-item grid-margin" data-aos="fade-left">
+            <h3 class="m-0">Leading Digital Agency<br>for  Business Solution.</h3>
+            <div class="col-lg-9 col-xl-8 p-0">
+              <p class="py-4 m-0 text-muted">Power-packed with impressive features and well-optimized, this template is designed to provide the best performance in all circumstances.</p>
+              <p class="pb-2 font-weight-medium text-muted">Its smart features make it a powerful stand-alone website building tool.</p>
+            </div>
+            <button class="btn btn-info">Readmore</button>
+          </div>
+        </div>
+      </section>     
+          
+      <section class="customer-feedback" id="feedback-section">
+        <div class="row">
+          <div class="col-12 text-center pb-5">
+            <h2>What our customers have to say</h2>
+            <h6 class="section-subtitle text-muted m-0">Lorem ipsum dolor sit amet, tincidunt vestibulum.</h6>
+          </div>
+          <div class="owl-carousel owl-theme grid-margin">
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face2.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Tony Martinez</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face3.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Sophia Armstrong</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face20.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Cody Lambert</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face15.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Cody Lambert</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face16.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Cody Lambert</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face1.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Tony Martinez</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face2.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Tony Martinez</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face3.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Sophia Armstrong</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="card customer-cards">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="images/face20.jpg" width="89" height="89" alt="" class="img-customer">
+                    <p class="m-0 py-3 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>
+                    <div class="content-divider m-auto"></div>
+                    <h6 class="card-title pt-3">Cody Lambert</h6>
+                    <h6 class="customer-designation text-muted m-0">Marketing Manager</h6>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+	  
+	 
+	  
+      <section class="contact-us" id="contact-section">
+        <div class="contact-us-bgimage grid-margin" >
+          <div class="pb-4">
+            <h4 class="px-3 px-md-0 m-0" data-aos="fade-down">Do you need more converter?</h4>
+            <h4 class="pt-1" data-aos="fade-down">Contact me</h4>
+          </div>
+          <div data-aos="fade-up">
+            <button class="btn btn-rounded btn-outline-danger">Contact me</button>
+          </div>          
+        </div>
+      </section>  -->
+	  
+	   <section class="contact-us" id="contact-section">
+  <div class="contact-us-bgimage grid-margin">
+    <div class="pb-4">
+      <h4 class="px-3 px-md-0 m-0" data-aos="fade-down">Do you need more converter?</h4>
+      <h4 class="pt-1" data-aos="fade-down">Contact me</h4>
+    </div>
+    <div data-aos="fade-up">
+      <button class="btn btn-rounded btn-outline-danger" data-toggle="modal" data-target="#contactModal">Contact me</button>
+    </div>          
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number (optional)">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+       <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/logo.png" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0"></p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="fabricconverter"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright <a href="https://www.fb.com/shaharia63" class="px-1">Shaharia</a>All rights reserved.</p>
+      </footer>
+      
+  </div>
+  </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+  <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=aa2aqbb1&n=n1.ratufa.io"></script>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8J4KQR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

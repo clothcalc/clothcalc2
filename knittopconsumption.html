@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knit Top Item Consumption</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+.box {
+  background-color: #e5e5e5; /* Replace with your desired background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.box:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Adjust the height of the box based on the content inside */
+.box-content {
+  height: 100%; /* Adjust the height based on your needs */
+  /* Add any additional styles or customization for the box here */
+}
+
+.form-control {
+  background-color: #e5ffff;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* Adjust the width to your desired value */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed */
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem; /* Adjust the padding as needed */
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1.25rem; /* Adjust the font size as needed */
+  }
+}
+
+
+</style>	 
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+<nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+  <div class="container">
+    <div class="navbar-brand-wrapper d-flex w-100">
+      <a class="navbar-brand" href="index">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+          <div class="navbar-collapse-logo">
+            <a class="navbar-brand" href="index">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </div>
+          <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="calculatorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="calculatorDropdown">
+            <a class="dropdown-item" href="fabricconverter">Fabric Converter</a>
+            <a class="dropdown-item" href="PriceConverter">Fabric Price Converter</a>
+            <a class="dropdown-item" href="gsmcalculate">GSM Converter</a>
+            <a class="dropdown-item" href="unitconverter">Unit Converter</a>
+            <a class="dropdown-item" href="cartoncalc">Carton Calculator</a>
+            <a class="dropdown-item" href="zippercalc">Zipper Calculation</a>
+			<a class="dropdown-item" href="knittopconsumption">Consumption Calculation</a>
+			<a class="dropdown-item" href="cmcalculation">CM Calculation</a>
+			<a class="dropdown-item" href="percentcalculate">Percentage Difference</a>
+            <!-- Add more dropdown items as needed -->
+          </div>
+        </li>
+        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+          <!-- Add a button or link for contact us if desired -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+</head>
+<div class ="container">
+
+<div class="text-center">
+	<h2>Consumption calculation for T-shirt, Polo Shirt, Hoody, Sweat Shirt, Fleece top item, Knit Jacket etc </h2>
+	</div>
+
+<div class="container my-3">
+  <div class="row">
+  
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Consumption Without Armhole</h4>
+        <div class="box-content">
+          <div>
+            <label for="bodyLength">Body Length:</label>
+            <input type="number" class="form-control" id="bodyLength1" step="0.1" required>
+          </div>
+          <div>
+            <label for="sleeveLength">Sleeve Length:</label>
+            <input type="number" class="form-control" id="sleeveLength1" step="0.1" required>
+          </div>
+          <div>
+            <label for="halfChest">Half Chest:</label>
+            <input type="number" class="form-control" id="halfChest1" step="0.1" required>
+          </div>
+          <div>
+            <label for="fabricWeight">Fabric Weight (GSM):</label>
+            <input type="number" class="form-control" id="fabricWeight1" required>
+          </div>
+          <div>
+            <label for="unitSelect1">Unit of Measurement:</label>
+            <select class="form-control" id="unitSelect1">
+              <option value="cm">CM</option>
+              <option value="inch">Inch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="result">Fabric Consumption:</label>
+            <input type="text" class="form-control" id="result" readonly>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculateConsumption()">Calculate Consumption</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculateConsumption() {
+    // Get input values
+    var bodyLength = parseFloat(document.getElementById("bodyLength1").value);
+    var sleeveLength = parseFloat(document.getElementById("sleeveLength1").value);
+    var halfChest = parseFloat(document.getElementById("halfChest1").value);
+    var fabricWeight = parseFloat(document.getElementById("fabricWeight1").value);
+    var unit = document.getElementById("unitSelect1").value;
+
+    // Define allowances based on unit
+    var bAllowance = unit === "inch" ? 1.968503937 : 5;
+    var sAllowance = unit === "inch" ? 1.968503937 : 5;
+	var chAllowance = unit === "inch" ? 1.5748031496 : 4;
+
+    // Calculate fabric consumption
+    var fabricConsumption = ((bodyLength + bAllowance + sleeveLength + sAllowance) * (halfChest + chAllowance) * 2 * fabricWeight) / (unit === "inch" ? 1550000 : 10000000);
+
+    // Display the result
+    document.getElementById("result").value = "Fabric Consumption: " + fabricConsumption.toFixed(3) + " kg per pc";
+  }
+</script>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Consumption Formula Without Armhole</h4>
+        <p class="text-left"><b>Consumtion Formula in CM: </b><br> (Body length + Sleeve Length + 10) X (Half Chest + 4) X 2 X Fabric Weight / 10000000<br><br>
+		
+		<b>Consumtion Formula in Inch:</b><br> 
+		(Body length + Sleeve Length + 10) X (Half Chest + 4) X 2 X Fabric Weight / 1550000
+		
+		<br><br>NB: 10 and 4 is here allownce.
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Consumption With Armhole</h4>
+        <div class="box-content">
+          <div>
+            <label for="bodyLength2">Body Length:</label>
+            <input type="number" class="form-control" id="bodyLength2" step="0.1" required>
+          </div>
+          <div>
+            <label for="sleeveLength2">Sleeve Length:</label>
+            <input type="number" class="form-control" id="sleeveLength2" step="0.1" required>
+          </div>
+          <div>
+            <label for="halfChest2">1/2 Chest:</label>
+            <input type="number" class="form-control" id="halfChest2" step="0.1" required>
+          </div>
+          <div>
+            <label for="armhole2">Armhole:</label>
+            <input type="number" class="form-control" id="armhole2" step="0.1" required>
+          </div>
+          <div>
+            <label for="fabricWeight2">Fabric Weight (GSM):</label>
+            <input type="number" class="form-control" id="fabricWeight2" required>
+          </div>
+          <div>
+            <label for="unitSelection">Unit:</label>
+            <select id="unitSelection" class="form-control" onchange="updateUnit()">
+              <option value="cm" selected>Centimeters (cm)</option>
+              <option value="in">Inches (in)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="result2">T-shirt Consumption:</label>
+            <input type="text" class="form-control" id="result2" readonly>
+            <label for="bodyFabric">Body Fabric:</label>
+            <input type="text" class="form-control" id="bodyFabricYard" readonly>
+            <label for="sleeveFabric">Sleeve Fabric:</label>
+            <input type="text" class="form-control" id="sleeveFabricYard" readonly>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculateConsumption2()">Calculate Consumption</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var unit = "cm"; // Default unit is centimeters (cm)
+
+  function updateUnit() {
+    unit = document.getElementById("unitSelection").value;
+  }
+
+  function calculateConsumption2() {
+    // Get input values
+    var bodyLength = parseFloat(document.getElementById("bodyLength2").value);
+    var sleeveLength = parseFloat(document.getElementById("sleeveLength2").value);
+    var halfChest = parseFloat(document.getElementById("halfChest2").value);
+    var armhole = parseFloat(document.getElementById("armhole2").value);
+    var fabricWeight = parseFloat(document.getElementById("fabricWeight2").value);
+
+    // Define allowances based on unit
+    var bodyAllowance = unit === "in" ?  2.3622047244 : 6;
+    var sleeveAllowance = unit === "in" ?  2.3622047244 : 6;
+	var chestAllowance = unit === "in" ? 1.5748031496 : 4;
+
+    // Calculate Body fabric
+    var bodyFabric = (bodyLength + bodyAllowance) * (halfChest + chestAllowance);
+
+    // Calculate Body fabric in Kg
+    var bodyFabricYard = bodyFabric * 2 * fabricWeight / (unit === "in" ? 1550000 : 10000000);
+
+    // Calculate Sleeve fabric
+    var sleeveFabric = (sleeveLength + sleeveAllowance) * (armhole * 2);
+
+    // Calculate Sleeve fabric in Kg
+    var sleeveFabricYard = sleeveFabric * 2 * fabricWeight / (unit === "in" ? 1550000 : 10000000);
+
+    // Calculate fabric consumption
+    var fabricConsumption2 = (bodyFabric + sleeveFabric) * 2 * fabricWeight / (unit === "in" ? 1550000 : 10000000);
+
+    // Display the result
+    document.getElementById("result2").value = "Total Consumption: " + fabricConsumption2.toFixed(3) + " kg per pc.";
+
+    // Display the result
+    document.getElementById("bodyFabricYard").value = "Body Fabric: " + bodyFabricYard.toFixed(3) + " kg per pc.";
+
+    // Display the result
+    document.getElementById("sleeveFabricYard").value = "Sleeve Fabric: " + sleeveFabricYard.toFixed(3) + " kg per pc.";
+  }
+</script>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Consumption Formula With Armhole</h4>
+        <p class="text-left"><b>Consumtion Formula in CM: </b><br> (Body Length + 6 X Chest + 4) + (Sleeve Length + 6 X (Half Armhole X 2)) X 2 X Fabric Weight / 10000000<br><br>
+		
+		<b>Consumtion Formula in Inch:</b><br> 
+		(Body Length + Allowance X Chest + Allownce) + (Sleeve Length + Allowance X (Half Armhole X 2)) X 2 X Fabric Weight / 1550000
+		
+		<br><br>NB: 6 and 4 is here allownce.
+		<br><br>NB: If armhole not find in measurement sheet you can calculate armhole from below calculator.
+		<br><br>Comment: Consumption with Armhole Measurement is more Acurate.
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>T-shirt/ Sweat shirt Neck Rib Consumption Calculator</h4>
+        <div class="box-content">
+          <div>
+            <label for="neckWidth">Neck Width / Collar Width:</label>
+            <input type="number" class="form-control" id="neckWidth" step="0.1" required>
+          </div>
+          <div>
+            <label for="frontNeckdrop">Front Neck Drop:</label>
+            <input type="number" class="form-control" id="frontNeckDrop" step="0.1" required>
+          </div>
+          <div>
+            <label for="backNeckDrop">Back Neck Drop:</label>
+            <input type="number" class="form-control" id="backNeckDrop" step="0.1" required>
+          </div>
+          <div>
+            <label for="ribWeight">Rib Weight (GSM):</label>
+            <input type="number" class="form-control" id="ribWeight" required>
+          </div>
+          <div>
+            <label for="unitSelect">Unit of Measurement:</label>
+            <select class="form-control" id="unitSelect">
+              <option value="cm">CM</option>
+              <option value="inch">Inch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ribresult">Rib Consumption:</label>
+            <input type="text" class="form-control" id="ribresult" readonly>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculateRib()">Calculate Consumption</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculateRib() {
+    // Get input values
+    var neckWidth = parseFloat(document.getElementById("neckWidth").value);
+    var frontNeckDrop = parseFloat(document.getElementById("frontNeckDrop").value);
+    var backNeckDrop = parseFloat(document.getElementById("backNeckDrop").value);
+    var ribWeight = parseFloat(document.getElementById("ribWeight").value);
+    var unit = document.getElementById("unitSelect").value;
+   
+    // Calculate Total Neck Width
+    var totalNeckWidth = (neckWidth * 2) + frontNeckDrop + backNeckDrop + 2 ;
+    // Calculate Total Neck Height
+    var totalNeckHeight = (backNeckDrop * 2) + 2 ;
+    // Calculate fabric consumption
+    var ribConsumption;
+    
+    if (unit === "inch") {
+      ribConsumption = (totalNeckWidth * totalNeckHeight * 12 * ribWeight / 1550000 * (1 + 0.05));
+    } else {
+      ribConsumption = (totalNeckWidth * totalNeckHeight * 12 * ribWeight / 10000000 * (1 + 0.05));
+    }
+    
+    // Display the result
+    document.getElementById("ribresult").value = "Rib Consumption: " + ribConsumption.toFixed(3) + " kg / Doz.";
+  }
+</script>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Armhole Calculation</h4>
+		 <p class="text-left"><b>Formula for Inch</b><br>  ArmHole = (Half Chest inch / 2) - 1.5inch;</p>
+		 <p class="text-left"><b>Formula for Cm</b><br>  ArmHole = (Half Chest cm / 2) - 3.81cm;</p><br><br>
+        <div class="box-content">
+          <div>
+            <label for="halfChestArm">Half Chest:</label>
+            <input type="number" class="form-control" id="halfChestArm" step="0.1" required>
+          </div>
+          <div>
+            <label for="unitSelect">Unit of Measurement:</label>
+            <select class="form-control" id="unitSelect2">
+              <option value="cm">CM</option>
+              <option value="inch">Inch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="armHoleresult">Armhole:</label>
+            <input type="text" class="form-control" id="armHoleresult" readonly>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculateArmhole()">Calculate Armhole</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculateArmhole() {
+    // Get input values
+    var halfChestArm = parseFloat(document.getElementById("halfChestArm").value);
+    var unit = document.getElementById("unitSelect2").value;
+
+    // Calculate Armhole
+    var armCalculation;
+
+    if (unit === "inch") {
+      armCalculation = (halfChestArm / 2) - 1.5;
+      document.getElementById("armHoleresult").value = "Armhole: " + armCalculation.toFixed(3) + " inch";
+    } else {
+      armCalculation = (halfChestArm / 2) - 3.81;
+      document.getElementById("armHoleresult").value = "Armhole: " + armCalculation.toFixed(3) + " cm";
+    }
+  }
+</script>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Polo Collar Length Calculation</h4>
+		<h6>(If you don't have full collar length or Collar circumstance)</h6>
+		 <p class="text-left"><b>Formula</b><br>  Collar Length = (neck width + front neck drop) * 3 / 2;</p><br>
+		
+        <div class="form-group">
+          <label for="neckWidth2">Neck Width/ Neck Opening:</label>
+          <input type="number" class="form-control" id="neckWidth2" step="0.01">
+
+          <label for="frontNeckDrop2">Front Neck Drop:</label>
+          <input type="number" class="form-control" id="frontNeckDrop2" step="0.01">
+
+          <label for="measurementUnit">Measurement Unit:</label>
+          <select class="form-control" id="measurementUnit">
+            <option value="cm">cm</option>
+            <option value="inch">inch</option>
+          </select>
+
+          <label for="collarLengthResult">Collar Length:</label>
+          <div>
+            <span id="actualResult"></span>
+            <br>
+            <span id="roundedResult" class="rounded-result"></span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calculateCollarLength()">Calculate</button>
+		
+		
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .rounded-result {
+    font-style: italic;
+  }
+</style>
+
+<script>
+  function calculateCollarLength() {
+    // Get input values
+    var neckWidth = parseFloat(document.getElementById('neckWidth2').value);
+    var frontNeckDrop = parseFloat(document.getElementById('frontNeckDrop2').value);
+    var measurementUnit = document.getElementById('measurementUnit').value;
+
+    // Perform the calculation
+    var collarLength = (neckWidth + frontNeckDrop) * 3 / 2;
+
+    // Check if measurement unit is cm
+    if (measurementUnit === 'cm') {
+      // Round the decimal part to 0.5
+      var roundedDecimal = Math.round((collarLength % 1) * 10) / 10;
+      if (roundedDecimal === 0.5) {
+        collarLength = Math.floor(collarLength) + 0.5;
+      } else {
+        collarLength = Math.floor(collarLength);
+      }
+      // Subtract 5 from the collar length
+      collarLength -= 5;
+    } else if (measurementUnit === 'inch') {
+      // Subtract 0.19685 from the collar length
+      collarLength -= 0.19685;
+      // Round the collar length to two decimal places
+      collarLength = Math.round(collarLength * 100) / 100;
+    }
+
+    // Display the results
+    document.getElementById('actualResult').innerText = 'Actual: ' + collarLength.toFixed(2) + ' ' + measurementUnit;
+    document.getElementById('roundedResult').innerText = 'We can calculate Collar Length: ' + Math.floor(collarLength) + ' ' + measurementUnit;
+  }
+</script>
+
+
+
+
+
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Polo Collar Consumption Calculation</h4>
+		<p class="text-left"><b>Formula</b><br>  Collar Length * (collar height + 2) * gsm / 10000000</p><br>
+        <div class="form-group">
+          <label for="collarLength">Collar Length/ Collar Circumstance:</label>
+          <input type="number" class="form-control" id="collarLength2" step="0.01">
+
+          <label for="collarHeight">Collar Height:</label>
+          <input type="number" class="form-control" id="collarHeight" step="0.01">
+
+          <label for="gsm">GSM (Grams per Square Meter):</label>
+          <input type="number" class="form-control" id="gsm" step="0.01">
+			
+		  <label for="consumptionResult">Polo Collar Consumption:</label>
+          <input type="text" class="form-control" id="consumptionResult" step="0.01" readonly>
+		  
+		   </div>
+		  
+          <button class="btn btn-primary" onclick="calculateCollarConsumption()">Calculate Collar Consumption</button>
+
+          <br>
+		<br>
+		N.B: Flat knit collar is single layer fabric. So, no need to multiply by 2. If the collar rib is double then need multiply the collar length with 2 first. In the formula 2 is for allowance.
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+ function calculateCollarConsumption() {
+    // Get input values
+   
+    var collarLength = parseFloat(document.getElementById('collarLength2').value);
+    var collarHeight = parseFloat(document.getElementById('collarHeight').value);
+    
+    var gsm = parseFloat(document.getElementById('gsm').value);
+
+    // Perform the calculation
+    
+    var consumption = collarLength * (collarHeight + 2) * gsm / 10000000;
+
+    // Display the results
+    document.getElementById('consumptionResult').value = consumption.toFixed(3) + ' kg per piece';
+
+  }
+</script>
+
+
+
+
+<div class="col-md-6 my-2">
+    <div class="box">
+      <div class="box-content">
+        <div class="text-center">
+          <h4>Sweat shirt / Hoodie Bottom Rib Consumption</h4>
+		   <div class="form-group">
+		 
+          <label for="bottomLength">Bottom Length:</label>
+          <input type="number"  class="form-control" id="bottomLength" step="0.01">
+
+          <label for="bottomRibHeight">Bottom Rib Height:</label>
+          <input type="number" class="form-control" id="bottomRibHeight" step="0.01">
+
+          <label for="bottongsm">GSM (Grams per Square Meter):</label>
+          <input type="number" class="form-control" id="bottomgsm" step="0.01">
+		  
+		  
+		  <label for="unitSelect4">Unit of Measurement:</label>
+          <select class="form-control" id="unitSelect4">
+            <option value="bottomcm">Centimeters</option>
+            <option value="bottominch">Inches</option>
+          </select>
+
+          <label for="result4">Fabric Consumption per Piece:</label>
+          <input type="text"  class="form-control" id="result4" readonly>
+		  </div>
+		  <button type="button" class="btn btn-primary" onclick="calculateBottomFabricConsumption()">Calculate</button>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calculateBottomFabricConsumption() {
+      var bottomLength = parseFloat(document.getElementById("bottomLength").value);
+      var bottomRibHeight = parseFloat(document.getElementById("bottomRibHeight").value);
+      var bottomgsm = parseFloat(document.getElementById("bottomgsm").value);
+	  
+	  var unit = document.getElementById("unitSelect4").value;
+	  var bottomAdjustment = unit === "bottominch" ? 1.5748031496 : 4;
+
+
+      var bottomFabricConsumption = ((bottomLength + bottomAdjustment ) * (bottomRibHeight + bottomAdjustment)) * 2 * bottomgsm  / (unit === "bottominch" ? 1550000 : 10000000);
+      
+      document.getElementById("result4").value = bottomFabricConsumption.toFixed(3) + " kg per piece";
+    }
+  </script>
+  
+  
+
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Sweat shirt / Hoodie Cuff Rib Consumption</h4>
+        <div class="form-group">
+          <label for="bottomLength">Half Cuff Length/ Half Sleeve open:</label>
+          <input type="number" class="form-control" id="cuffLength" step="0.01">
+
+          <label for="bottomRibHeight">Cuff Height / Sleeve Rib Height:</label>
+          <input type="number" class="form-control" id="cuffHeight" step="0.01">
+
+          <label for="gsm">GSM (Grams per Square Meter):</label>
+          <input type="number" class="form-control" id="cuffRibGsm" step="0.01">
+		  
+		  <label for="unitSelect3">Unit of Measurement:</label>
+          <select class="form-control" id="unitSelect3">
+            <option value="ribcm">Centimeters</option>
+            <option value="ribinch">Inches</option>
+          </select>
+
+
+          <label for="result5">Fabric Consumption per Piece:</label>
+          <input type="text" class="form-control" id="result5" readonly>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calculateCuffConsumption()">Calculate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculateCuffConsumption() {
+    var cuffLength = parseFloat(document.getElementById("cuffLength").value);
+    var cuffHeight = parseFloat(document.getElementById("cuffHeight").value);
+    var cuffRibGsm = parseFloat(document.getElementById("cuffRibGsm").value);
+
+    var unit = document.getElementById("unitSelect3").value;
+    var adjustment = unit === "ribinch" ? 1.5748031496 : 4;
+
+    var CuffConsumption = ((cuffLength * 2) + adjustment) * (cuffHeight + adjustment) * 2 * cuffRibGsm / (unit === "ribinch" ? 1550000 : 10000000);
+
+    document.getElementById("result5").value = CuffConsumption.toFixed(3) + " kg per piece";
+  }
+</script>
+
+
+
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Hood Consumption</h4>
+        <div class="form-group">
+          <label for="hoodLength">Hood Height:</label>
+          <input type="number" class="form-control" id="hoodHeight" step="0.01">
+
+          <label for="bottomRibHeight">Hood Width</label>
+          <input type="number" class="form-control" id="hoodWidth" step="0.01">
+
+          <label for="hoodGsm">GSM (Grams per Square Meter):</label>
+          <input type="number" class="form-control" id="hoodGsm" step="0.01">
+		  
+		  <label for="unitSelect5">Unit of Measurement:</label>
+          <select class="form-control" id="unitSelect5">
+            <option value="hoodbcm">Centimeters</option>
+            <option value="hoodinch">Inches</option>
+          </select>
+
+
+          <label for="result6">Fabric Consumption per Piece:</label>
+          <input type="text" class="form-control" id="result6" readonly>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calculateHoodConsumption()">Calculate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculateHoodConsumption() {
+    var hoodHeight = parseFloat(document.getElementById("hoodHeight").value);
+    var hoodWidth = parseFloat(document.getElementById("hoodWidth").value);
+    var hoodGsm = parseFloat(document.getElementById("hoodGsm").value);
+	
+	// Define allowances based on unit
+	
+	var unit = document.getElementById("unitSelect5").value;
+    var hLengthAllowance = unit === "in" ?  1.968503937 : 5;
+	var hHeightAllowance = unit === "in" ? 1.5748031496 : 4;
+
+
+    
+    var adjustment = unit === "ribinch" ? 1.5748031496 : 4;
+
+    var hoodConsumption = (hoodHeight + hLengthAllowance) * (hoodWidth + hHeightAllowance) * 2 * hoodGsm / (unit === "hoodinch" ? 1550000 : 10000000);
+
+    document.getElementById("result6").value = hoodConsumption.toFixed(3) + " kg per piece";
+  }
+</script>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Consumption Formula</h4>
+        <p class="text-left"><b>Consumtion Formula in CM: </b><br> (Hood Height + Allowance) x (1/2 Hood Width + Allowance) x 2 x GSM / 100,00,000<br><br>
+		
+		<b>Consumtion Formula in Inch:</b><br> 
+		(Hood Height + Allowance) x (1/2 Hood Width + Allowance) x 2 x GSM / 1550000
+		
+		<br><br>NB: allowance we calculate 5 and 4 is here</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+ 
+ 
+      <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/logo.png" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0"></p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="KgYardKg"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright © 2023<a href="https://www.bootstrapdash.com/" class="px-1">Bootstrapdash.</a>All rights reserved.</p>
+      </footer>  
+ </div>
+   </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+
+</body>
+</html>

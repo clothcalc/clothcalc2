@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Fabric Price Conversion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+.box {
+  background-color: #e5e5e5; /* Replace with your desired background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.box:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Adjust the height of the box based on the content inside */
+.box-content {
+  height: 100%; /* Adjust the height based on your needs */
+  /* Add any additional styles or customization for the box here */
+}
+
+.form-control {
+  background-color: #e5ffff;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* Adjust the width to your desired value */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed */
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem; /* Adjust the padding as needed */
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1.25rem; /* Adjust the font size as needed */
+  }
+}
+
+
+</style>	 
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+<nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+  <div class="container">
+    <div class="navbar-brand-wrapper d-flex w-100">
+      <a class="navbar-brand" href="index">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+          <div class="navbar-collapse-logo">
+            <a class="navbar-brand" href="index">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </div>
+          <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="calculatorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="calculatorDropdown">
+            <a class="dropdown-item" href="fabricconverter">Fabric Converter</a>
+            <a class="dropdown-item" href="PriceConverter">Fabric Price Converter</a>
+            <a class="dropdown-item" href="gsmcalculate">GSM Converter</a>
+            <a class="dropdown-item" href="unitconverter">Unit Converter</a>
+            <a class="dropdown-item" href="cartoncalc">Carton Calculator</a>
+            <a class="dropdown-item" href="zippercalc">Zipper Calculation</a>
+			<a class="dropdown-item" href="knittopconsumption">Consumption Calculation</a>
+			<a class="dropdown-item" href="cmcalculation">CM Calculation</a>
+			<a class="dropdown-item" href="percentcalculate">Percentage Difference</a>
+            <!-- Add more dropdown items as needed -->
+          </div>
+        </li>
+        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+          <!-- Add a button or link for contact us if desired -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</header>
+<div class ="container">
+
+<div class="text-center">
+	<h1>CM Calculation</h1>
+	</div>
+
+<div class="container my-3">
+  <div class="row">
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>CM Calculation</h4>
+        <div class="box-content">
+          <div>
+            <label for="monthlyCost">Monthly Cost:</label>
+            <input type="number" class="form-control" id="monthlyCost" step="0.01" required>
+          </div>
+          <div>
+            <label for="runningMachine">Running Machine:</label>
+            <input type="number" class="form-control" id="runningMachine" required>
+          </div>
+          <div>
+            <label for="layoutMachine">Layout Machine:</label>
+            <input type="number" class="form-control" id="layoutMachine" required>
+          </div>
+          <div>
+            <label for="totalProduction">Total Production Per Day:</label>
+            <input type="number" class="form-control" id="totalProduction" required>
+          </div>
+          <div class="form-group">
+            <label for="cmResult">CM Calculation:</label>
+            <input type="text" class="form-control" id="cmResult" readonly>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculateCM()">Calculate CM</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>CM Calculation</h4>
+        <div class="box-content">
+          <div>
+            <label for="machineCostPerDay">Machine Cost per Day ($):</label>
+            <input type="number" class="form-control" id="machineCostPerDay" step="0.01" required>
+          </div>
+          <div>
+            <label for="layoutMachine2">Layout Machine:</label>
+            <input type="number" class="form-control" id="layoutMachine2" required>
+          </div>
+          <div>
+            <label for="productionPerDay">Production per Day:</label>
+            <input type="number" class="form-control" id="productionPerDay" required>
+          </div>
+          <div class="form-group">
+            <label for="cmResult2">CM Calculation:</label>
+            <input type="text" class="form-control" id="cmResult2" readonly>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculateCM2()">Calculate CM</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculateCM() {
+    // Get input values
+    var monthlyCost = parseFloat(document.getElementById("monthlyCost").value);
+    var runningMachine = parseFloat(document.getElementById("runningMachine").value);
+    var layoutMachine = parseFloat(document.getElementById("layoutMachine").value);
+    var totalProduction = parseFloat(document.getElementById("totalProduction").value);
+
+    // Calculate Machine Cost
+    var machineCost = monthlyCost / 26 / runningMachine;
+
+    // Calculate CM Calculation
+    var cmCalculation = machineCost * layoutMachine / totalProduction ;
+
+    // Display the result
+    document.getElementById("cmResult").value = "CM : " + cmCalculation.toFixed(2) + " Per Pc";
+  }
+
+  function calculateCM2() {
+    // Get input values
+    var machineCostPerDay = parseFloat(document.getElementById("machineCostPerDay").value);
+    var layoutMachine = parseFloat(document.getElementById("layoutMachine2").value);
+    var productionPerDay = parseFloat(document.getElementById("productionPerDay").value);
+
+    // Calculate CM Calculation
+    var cmCalculation = machineCostPerDay * layoutMachine / productionPerDay ;
+
+    // Display the result
+    document.getElementById("cmResult2").value = "CM : " + cmCalculation.toFixed(2) + " Per Pc";
+  }
+</script>
+
+</div>
+
+ <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/logo.png" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0"></p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="KgYardKg"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright © 2023<a href="https://www.bootstrapdash.com/" class="px-1">Bootstrapdash.</a>All rights reserved.</p>
+      </footer>  
+ 
+   </div>
+   </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+
+</body>
+</html>

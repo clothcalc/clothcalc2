@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-457CJLGKGQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-457CJLGKGQ');
+</script>
+  
+  <title>Fabric Price Conversion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+.box {
+  background-color: #e5e5e5; /* Replace with your desired background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.box:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Adjust the height of the box based on the content inside */
+.box-content {
+  height: 100%; /* Adjust the height based on your needs */
+  /* Add any additional styles or customization for the box here */
+}
+
+.form-control {
+  background-color: #e5ffff;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* Adjust the width to your desired value */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed */
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem; /* Adjust the padding as needed */
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1.25rem; /* Adjust the font size as needed */
+  }
+}
+
+
+</style>	 
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+<nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+  <div class="container">
+    <div class="navbar-brand-wrapper d-flex w-100">
+      <a class="navbar-brand" href="index">
+        <img src="images/Group2.svg" alt="Logo">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+          <div class="navbar-collapse-logo">
+            <a class="navbar-brand" href="index">
+              <img src="images/Group2.svg" alt="Logo">
+            </a>
+          </div>
+          <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features-section">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="calculatorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="calculatorDropdown">
+            <a class="dropdown-item" href="fabricconverter">Fabric Converter</a>
+            <a class="dropdown-item" href="PriceConverter">Fabric Price Converter</a>
+            <a class="dropdown-item" href="gsmcalculate">GSM Converter</a>
+            <a class="dropdown-item" href="unitconverter">Unit Converter</a>
+            <a class="dropdown-item" href="cartoncalc">Carton Calculator</a>
+            <a class="dropdown-item" href="zippercalc">Zipper Calculation</a>
+			<a class="dropdown-item" href="knittopconsumption">Consumption Calculation</a>
+			<a class="dropdown-item" href="cmcalculation">CM Calculation</a>
+			<a class="dropdown-item" href="percentcalculate">Percentage Difference</a>
+            <!-- Add more dropdown items as needed -->
+          </div>
+        </li>
+        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+          <!-- Add a button or link for contact us if desired -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<div class="container">
+	<div class="text-center">
+	<h1>Fabric Price Converter</h1>
+	</div>
+
+
+<div class="container my-3">
+  <div class="row">
+    <div class="col-md-6 my-2">
+      <div class="box">
+	   <div class="box-content">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="text-center">
+		<h4>Convert Fabric Price from KG to Yards</h4>
+		<h5>If you know fabric width and gsm</h5>
+		<br>
+		<b>Formula: 
+		<br>Price per Yard= (Price per kg X Width of the fabric in inch X 0.0254 X GSM)/1093.613 </b>
+		<br>
+		<br>
+		<br>NB: Please note that in our calculetor you need to give width in inch, this will convert inch to meter in background
+		</div>
+	</div>
+      </div>
+	  </div>
+    </div>
+		
+		<div class="col-md-6 my-2">
+      <div class="box">
+	   <div class="box-content">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="text-center">
+			<div class="form-group">
+			<label for="price-per-kg2">Price per kg:</label>
+			<input type="number" id="price-per-kg2" class="form-control">
+			<label for="width">Width (in inch):</label>
+			<input type="number" id="width" class="form-control">
+			<label for="gsm">GSM:</label>
+			<input type="number" id="gsm" class="form-control">
+			</div>
+			<button id="calculate-price-button2" class="btn btn-primary">Calculate Price per Yard</button>
+			<div id="price-per-yard2" class="mt-3"></div>
+			</div>
+			
+		</div>
+      </div>
+	  </div>
+    </div>
+	<script>
+		var pricePerKg2Input = document.getElementById("price-per-kg2");
+		var widthInput = document.getElementById("width");
+		var gsmInput = document.getElementById("gsm");
+		var pricePerYard2Output = document.getElementById("price-per-yard2");
+		var calculatePriceButton2 = document.getElementById("calculate-price-button2");
+
+		calculatePriceButton2.addEventListener("click", calculatePrice2);
+
+		function calculatePrice2() {
+			var pricePerKg2 = parseFloat(pricePerKg2Input.value);
+			var width = parseFloat(widthInput.value);
+			var gsm = parseFloat(gsmInput.value);
+			var pricePerYard2 = (pricePerKg2 * width * 0.0254 * gsm) / 1093.613;
+			if (!isNaN(pricePerYard2)) {
+				pricePerYard2Output.textContent = "Price per yard: $" + pricePerYard2.toFixed(2);
+			} else {
+				pricePerYard2Output.textContent = "";
+			}
+		}
+	</script>
+	
+	<div class="col-md-6 my-2">
+      <div class="box">
+	   <div class="box-content">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="text-center">
+		<h4>Convert Fabric Price from KG to Yards</h4>
+		<h5>If you know fabric width and gsm</h5>
+		<br>
+		<b>Formula: 
+		<br>Price per Yard= (Price per kg X Width of the fabric in meter X GSM)/1093.613 </b>
+		
+		<br>
+		<br>
+		<br>NB: Please note that in our calculetor you need to give width in cm, this will convert inch to meter in background
+		
+		</div>
+      </div>
+	  </div>
+    </div>
+</div>
+
+<div class="col-md-6 my-2">
+      <div class="box">
+	   <div class="box-content">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="text-center">
+			<div class="form-group">
+			<label for="price-per-kg3">Price per kg:</label>
+			<input type="number" id="price-per-kg3" class="form-control">
+			<label for="width3">Width (in cm):</label>
+			<input type="number" id="width3" class="form-control">
+			<label for="gsm3">GSM:</label>
+			<input type="number" id="gsm3" class="form-control">
+			</div>
+			<button id="calculate-price-button3" class="btn btn-primary">Calculate Price per Yard</button>
+			<div id="price-per-yard3" class="mt-3"></div>
+		</div>
+			
+	</div>
+      </div>
+	  </div>
+    </div>		
+			
+
+
+	<script>
+    var pricePerKg3Input = document.getElementById("price-per-kg3");
+    var width3Input = document.getElementById("width3");
+    var gsm3Input = document.getElementById("gsm3");
+    var pricePerYard3Output = document.getElementById("price-per-yard3");
+    var calculatePrice3Button = document.getElementById("calculate-price-button3");
+
+    calculatePrice3Button.addEventListener("click", calculatePrice3);
+
+    function calculatePrice3() {
+        var pricePerKg3 = parseFloat(pricePerKg3Input.value);
+        var width3 = parseFloat(width3Input.value);
+        var gsm3 = parseFloat(gsm3Input.value);
+        var InchMeter = (width3 / 100); // Fabric inch to meters
+        var pricePerYard3 = (pricePerKg3 * InchMeter * gsm3) / 1093.613;
+
+        if (!isNaN(pricePerYard3)) {
+            pricePerYard3Output.textContent = "Price per yard: $" + pricePerYard3.toFixed(2);
+        } else {
+            pricePerYard3Output.textContent = "";
+        }
+    }
+</script>
+
+<div class="col-md-6 my-2">
+      <div class="box">
+	   <div class="box-content">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="text-center">
+ <h4>Convert Price from KG to Yards</h4>
+ <br>
+  <b>Formula: 
+  <br>Price per Yard=(KG price/Converted Fabric Yards)</b>
+  
+  <p>If you convert the fabric from kg to yards via below link then you can input directly kg price & converted fabric yards and get Price Per Yard. </p>
+	
+	<p><a class="btn btn-primary" href="KgYardKg">KG to Yards converter</a></p>
+
+</div>
+      </div>
+	  </div>
+    </div>
+
+ </div>
+<div class="col-md-6 my-2">
+      <div class="box">
+	   <div class="box-content">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="text-center">
+		   <div class="form-group">
+	<label for="price-per-kg1">Price per Kg:</label>
+	<input type="number" id="price-per-kg1" name="price-per-kg1" class="form-control">
+	<label for="fabrics-yards1">Fabrics Yards converted from kg:</label>
+	<input type="number" id="fabrics-yards1" name="fabrics-yards1" class="form-control">
+			</div>
+	<button id="calculate-price-button1" class="btn btn-primary">Calculate Price</button>
+	<div id="price-per-yards1" class="mt-3"></div>
+			</div>
+
+	</div>
+</div>
+</div>
+</div>
+      </div>
+ </div>
+</div>
+
+  <script>
+		var pricePerKg1Input = document.getElementById("price-per-kg1");
+		var fabricsYards1Input = document.getElementById("fabrics-yards1");
+		var pricePerYards1Span = document.getElementById("price-per-yards1");
+		var calculatePriceButton1 = document.getElementById("calculate-price-button1");
+
+		calculatePriceButton1.addEventListener("click", calculatePrice1);
+
+		function calculatePrice1() {
+			var pricePerKg1 = parseFloat(pricePerKg1Input.value);
+			var fabricsYards1 = parseFloat(fabricsYards1Input.value);
+			var pricePerYards1 = pricePerKg1 / fabricsYards1;
+			if (!isNaN(pricePerYards1)) {
+				pricePerYards1Span.textContent = "Price per yard: $" + pricePerYards1.toFixed(2);
+			} else {
+				pricePerYards1Span.textContent = "";
+			}
+		}
+  </script>
+  
+    <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/Group2.svg" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0">+88 01722 224913</p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="fabricconverter"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright <a href="https://www.fb.com/shaharia63" class="px-1">Shaharia</a>All rights reserved.</p>
+      </footer>
+      
+  </div>
+  </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+</body>
+</html>

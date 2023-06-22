@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>All Apparel Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+
+.box {
+  --c: #000000; /* the border color */
+  --b: 2px;    /* the border thickness*/
+  --g: 1px;     /* the gap on hover */
+  padding: 20px;
+  border-radius: 5px;
+    height: 100%;
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%,var(--c) 0;
+  background: 
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+     var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+    conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+     0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+  transition: .3s, background-position .3s .3s;
+
+}
+.box:hover {
+  --_i: 100%;
+  transition: .2s, background-size .2s .2s;
+}
+
+.box {
+    background-color: #e5e5e5; /* Replace with your desired background color */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100%;
+  }
+  
+  /* Optional: Adjust the height of the box based on the content inside */
+  .box-content {
+    height: calc(100% - 40px);
+    /* Replace 40px with the sum of padding and margin values if you adjust the padding or margin of the box */
+    /* Add any additional styles or customization for the box here */
+  }
+
+.btn-primary:hover a.text-white {
+    color: black;
+  }
+
+
+</style>
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+    <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+    <div class="container">
+      <div class="navbar-brand-wrapper d-flex w-100">
+        <img src="images/logo.png" alt="">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="mdi mdi-menu navbar-toggler-icon"></span>
+        </button> 
+      </div>
+      <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+          <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+            <div class="navbar-collapse-logo">
+              <img src="images/logo.png" alt="">
+            </div>
+            <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#header-section">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about">About</a>
+          </li>
+         
+          <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contact Us</button>
+          </li>
+        </ul>
+      </div>
+    </div> 
+    </nav>   
+	
+
+	
+  </header>
+
+<div class="content-wrapper">
+    <div class="container">
+ <div class="col-12 text-center pb-5">
+            <h2>All of our Calculator</h2>
+            <h6 class="section-subtitle text-muted">You can convert/calculate fabric, price, GSM etc.</h6>
+          </div>
+<div class="container my-3">
+  <div class="row">
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Fabric Converter</h4>
+       <p class="text-left"> 1. KG to Yard, from CM <br>
+        2. KG to Yard, from Inch <br>
+        3. Yard to KG
+      </p>
+   
+        <a href="KgYardKg" class="btn btn-primary">Click Here for Converter</a>
+
+    </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Fabric Price Converter</h4>
+		<p class="text-left">
+        1. Calculate fabric price from KG to Yard from width in inch <br>
+		2. Calculate fabric price from KG to Yard from width in cm<br>
+        3. Calculate fabric price from converted fabric If you know the converted yard<br>
+      </p>
+      <a href="PriceConverter" class="btn btn-primary">Click Here for Converter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Unit Converter</h4>
+		<p class="text-left">
+        1. GSM to Oz <br>
+        2. Oz to GSM <br>
+		3. KG to LBS <br>
+		4. Meter to Yard to Inch to CM to MM<br>
+		5. MM to CM to Inch to Yard to Meter<br>
+	</p>
+	<a href="unitconverter" class="btn btn-primary">Click Here for Converter</a>
+     </div>
+	 </div>
+    </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>GSM Converter</h4>
+		<p class="text-left">
+        1. Calculate gsm from Width in inch<br>
+		2. Calculate gsm from Width in cm<br>
+		3. Calculate weight of the fabric from gsm
+	  </p>
+	 <a href="gsmcalculate" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Percentage Difference</h4>
+		<p class="text-left">
+        1. Calculate Percentage difference from two value<br>
+		
+	  </p>
+
+		<a href="percentcalculate" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Carton Calculation</h4>
+        <p class="text-left">
+		1. CBM Calculation from CM<br>
+		2. CBF Calculation from Inch<br>
+		3. Carton Consumption & Cost Calculator<br>
+		4. Dimensional Weight Calculator
+
+		
+		</p>
+	  	<a href="cartoncalc" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Apparel Zipper Length Calculation</h4>
+        <p class="text-left">
+		1. When the garments body length measure from HPS<br>
+		2. When the garments body length measure from CB<br>
+		3. When the garments have high neck and zipper goes up to high neck drop from bottom
+		
+		</p>
+	  	<a href="zippercalc" class="btn btn-primary">Click Here for Converter</a>
+	  </div>
+    </div>
+  </div>
+</div>
+
+</div>	  
+</div>	  
+
+
+   <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/logo.png" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0"></p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="fabricconverter"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright <a href="https://www.fb.com/shaharia63" class="px-1">Shaharia</a>All rights reserved.</p>
+      </footer>
+      
+  </div>
+  </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+</body>
+</html>

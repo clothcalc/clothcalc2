@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple landing page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script> 
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+
+
+def calculate_fabric1():
+    weight = float(input("Weight (Kg): "))
+    gsm = float(input("GSM: "))
+    width = float(input("Width (cm): "))
+
+    # Convert width to meters
+    width_meters = width / 100
+
+    # Calculate fabric length in meters
+    fabric_length_meters = (weight * 1000) / (gsm * width_meters)
+
+    # Convert fabric length from meters to yards
+    fabric_length_yards = fabric_length_meters * 1.09361
+
+    # Display result
+    print(fabric_length_yards, "Yards")
+
+def calculate_fabric2():
+    weight = float(input("Weight (Kg): "))
+    gsm = float(input("GSM: "))
+    width = float(input("Width (inch): "))
+
+    # Convert width to meters
+    width_meters = width * 0.0254
+
+    # Calculate fabric length in meters
+    fabric_length_meters = (weight * 1000) / (gsm * width_meters)
+
+    # Convert fabric length from meters to yards
+    fabric_length_yards = fabric_length_meters * 1.09361
+
+    # Display result
+    print(fabric_length_yards, "Yards")
+
+print("1. kg to yards, fabric width in centimeters")
+print("2. kg to yards, fabric width in inch")
+
+choice = int(input("Enter your choice: "))
+
+if choice == 1:
+    calculate_fabric1()
+elif choice == 2:
+    calculate_fabric2()
+else:
+    print("Invalid choice. Please choose either 1 or 2.")
+
+</body>
+</html>

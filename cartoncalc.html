@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carton Size Measurement and Calculate Price </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Merchandising Calculation" content="T-shirt Consumption, polo shirt Consumption, Hoodie  Fabric Convert, Fabric Price Convert, Zipper Length Convert, GSM Converter, Unit Converter, Percentage difference, Carton Calculation" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  
+<style>
+.box {
+  background-color: #e5e5e5; /* Replace with your desired background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.box:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Adjust the height of the box based on the content inside */
+.box-content {
+  height: 100%; /* Adjust the height based on your needs */
+  /* Add any additional styles or customization for the box here */
+}
+
+.form-control {
+  background-color: #e5ffff;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* Adjust the width to your desired value */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed */
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem; /* Adjust the padding as needed */
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1.25rem; /* Adjust the font size as needed */
+  }
+}
+
+
+</style>	 
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+<nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+  <div class="container">
+    <div class="navbar-brand-wrapper d-flex w-100">
+      <a class="navbar-brand" href="index">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+          <div class="navbar-collapse-logo">
+            <a class="navbar-brand" href="index">
+              <img src="images/logo.png" alt="Logo">
+            </a>
+          </div>
+          <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="calculatorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="calculatorDropdown">
+            <a class="dropdown-item" href="fabricconverter">Fabric Converter</a>
+            <a class="dropdown-item" href="PriceConverter">Fabric Price Converter</a>
+            <a class="dropdown-item" href="gsmcalculate">GSM Converter</a>
+            <a class="dropdown-item" href="unitconverter">Unit Converter</a>
+            <a class="dropdown-item" href="cartoncalc">Carton Calculator</a>
+            <a class="dropdown-item" href="zippercalc">Zipper Calculation</a>
+			<a class="dropdown-item" href="knittopconsumption">Consumption Calculation</a>
+			<a class="dropdown-item" href="cmcalculation">CM Calculation</a>
+			<a class="dropdown-item" href="percentcalculate">Percentage Difference</a>
+            <!-- Add more dropdown items as needed -->
+          </div>
+        </li>
+        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+          <!-- Add a button or link for contact us if desired -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+</head>
+<div class ="container">
+
+<div class="text-center">
+	<h1>Carton Calculation</h1>
+	</div>
+
+<div class="container my-3">
+  <div class="row">
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        		  <h4>CBM Calculation from CM</h4>
+			  
+			  <p class="text-left"><b>Formula:</b><br>CBM = (length * width * height * Qty) / 1000000
+
+<b>Explanation:</b>
+<br>
+    * The CBM (Cubic Meter) is calculated by multiplying the length, width, height, and carton quantity.
+    <br>* The result is divided by 1000000 to convert from cubic centimeters to cubic meters.</p>
+		  <h4>CBF Calculation from Inch</h4>
+			  <p class="text-left"><b>Formula:</b><br>CBF = (length * width * height * Qty) / 1728
+
+				<br><b>Explanation:</b><br>
+
+    * The CBF (Cubic Foot) is calculated by multiplying the length in inches, width in inches, height in inches, and carton quantity.<br>
+    * The result is divided by 1728 to convert from cubic inches to cubic feet.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="d-flex flex-column justify-content-between h-100">
+        <div class="text-center">
+          <div class="form-group">
+		  <h4>CBM & CBF Calculation</h4>
+
+		  
+            <label for="measurementType">Select Measurement Type:</label>
+            <select id="measurementType" class="form-control">
+              <option value="cm">CM</option>
+              <option value="inch">Inch</option>
+            </select>
+
+
+
+            <label for="length">Length:</label>
+            <input type="number" id="length" step="0.01" class="form-control">
+
+         
+
+            <label for="width">Width:</label>
+            <input type="number" id="width" step="0.01" class="form-control">
+
+          
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" step="0.01" class="form-control">
+
+			<label for="cartonQty">Carton Quantity:</label>
+			<input type="number" id="cartonQty" class="form-control">
+</div>
+
+			  <div class="form-group">
+                <label for="result">CBM</label>
+                <input type="text" class="form-control" id="result" readonly>
+              </div>
+
+            <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+
+
+         
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculate() {
+    const measurementType = document.getElementById("measurementType").value;
+    const length = parseFloat(document.getElementById("length").value);
+    const width = parseFloat(document.getElementById("width").value);
+    const height = parseFloat(document.getElementById("height").value);
+	const cartonQty = parseFloat(document.getElementById("cartonQty").value);
+
+    if (measurementType === "cm") {
+      if (length && width && height) {
+        const cbm = (length * width * height * cartonQty) / 1000000;
+        document.getElementById("result").value = "CBM: " + cbm.toFixed(3);
+      } else {
+        document.getElementById("result").value = "Please enter all dimensions.";
+      }
+    } else if (measurementType === "inch") {
+      const lengthInches = parseFloat(document.getElementById("length").value);
+      const widthInches = parseFloat(document.getElementById("width").value);
+      const heightInches = parseFloat(document.getElementById("height").value);
+
+      if (lengthInches && widthInches && heightInches) {
+        const cbf = (lengthInches * widthInches * heightInches * cartonQty) / 1728;
+        document.getElementById("result").value = "CBF: " + cbf.toFixed(3);
+      } else {
+        document.getElementById("result").value = "Please enter all dimensions.";
+      }
+    }
+  }
+</script>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Carton Consumption</h4>
+        <p class="text-left"><b>Consumption Formula with CM Measurement: </b><br> (length + width + 6) * (width + height + 4) * 2 / 10000<br><br>
+		
+		<p class="text-left"><b>Consumption Formula with inch Measurement: </b><br> (length + width + 2) * (width + height + 2) * 2 / 1550<br><br>
+
+		<b>Cost Formula:</b><br> 
+		Total Square meter * Quantity * Price per Square Meter
+		
+		<br><br>NB: Mesurement in CM, 6/2 and 4/2 is here allownce.
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="d-flex flex-column justify-content-between h-100">
+        <div class="text-center">
+          <h4>Carton Consumption & Cost Calculator</h4>
+          <div class="form-group">
+            <label for="unit">Unit of Measurement:</label>
+            <select id="unit" class="form-control" onchange="updateUnitLabels()">
+              <option value="cm">CM</option>
+              <option value="inch">Inch</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="length">Length:</label>
+            <input type="number" class="form-control" id="crtlength">
+          </div>
+          <div class="form-group">
+            <label for="width">Width:</label>
+            <input type="number" class="form-control" id="crtwidth">
+          </div>
+          <div class="form-group">
+            <label for="height">Height:</label>
+            <input type="number" class="form-control" id="crtheight">
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="crtqty">
+          </div>
+          <div class="form-group">
+            <label for="price">Price Per Square Meter:</label>
+            <input type="number" class="form-control" id="price">
+          </div>
+
+          <div class="form-group">
+            <label for="crtmtr">Square Meter Per Carton</label>
+            <input type="text" class="form-control" id="crtmtr" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="crtcost">Carton Cost</label>
+            <input type="text" class="form-control" id="crtcost" readonly>
+          </div>
+
+          <button class="btn btn-primary" onclick="calculateCrtMtr()">Calculate Consumption</button>
+          <button class="btn btn-primary" onclick="calculateCrtCost()">Calculate Carton Price</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+
+function calculateCrtMtr() {
+  var length = parseFloat(document.getElementById("crtlength").value);
+  var width = parseFloat(document.getElementById("crtwidth").value);
+  var height = parseFloat(document.getElementById("crtheight").value);
+  var unit = document.getElementById("unit").value;
+
+  if (unit === "cm") {
+    var squareMeter = (length + width + 6) * (width + height + 4) * 2 / 10000;
+    document.getElementById("crtmtr").value = " " + squareMeter.toFixed(2) + " Square Meter Per pc Carton";
+  } else if (unit === "inch") {
+    var squareMeter = ((length + width + 2) * (width + height + 2) * 2 / 1550);
+    document.getElementById("crtmtr").value = " " + squareMeter.toFixed(2) + " Square Meter Per pc Carton";
+  }
+}
+
+function calculateCrtCost() {
+  var length = parseFloat(document.getElementById("crtlength").value);
+  var width = parseFloat(document.getElementById("crtwidth").value);
+  var height = parseFloat(document.getElementById("crtheight").value);
+  var qty = parseFloat(document.getElementById("crtqty").value);
+  var price = parseFloat(document.getElementById("price").value);
+  var unit = document.getElementById("unit").value;
+
+  if (unit === "cm") {
+    var totalCost = (length + width + 6) * (width + height + 4) * 2 / 10000 * price;
+    if (qty === 1) {
+      document.getElementById("crtcost").value = " " + totalCost.toFixed(2) + " USD for 1 Carton";
+    } else {
+      var costForQty = totalCost * qty;
+      document.getElementById("crtcost").value = " " + costForQty.toFixed(2) + " USD for " + qty + " Cartons";
+    }
+  } else if (unit === "inch") {
+    var totalCost = ((length + width + 2) * (width + height + 2) * 2 / 1550) * price;
+    if (qty === 1) {
+      document.getElementById("crtcost").value = " " + totalCost.toFixed(2) + " USD for 1 Carton";
+    } else {
+      var costForQty = totalCost * qty;
+      document.getElementById("crtcost").value = " " + costForQty.toFixed(2) + " USD for " + qty + " Cartons";
+    }
+  }
+}
+
+function updateUnitLabels() {
+  var unit = document.getElementById("unit").value;
+  if (unit === "cm") {
+    document.getElementById("lengthLabel").textContent = "Length (CM):";
+    document.getElementById("widthLabel").textContent = "Width (CM):";
+    document.getElementById("heightLabel").textContent = "Height (CM):";
+  } else if (unit === "inch") {
+    document.getElementById("lengthLabel").textContent = "Length (Inch):";
+    document.getElementById("widthLabel").textContent = "Width (Inch):";
+    document.getElementById("heightLabel").textContent = "Height (Inch):";
+  }
+}
+
+
+
+
+</script>
+
+
+<script>
+    function calculateCBM() {
+      const length = document.getElementById("length").value;
+      const width = document.getElementById("width").value;
+      const height = document.getElementById("height").value;
+      const cartonQty = document.getElementById("cartonQty").value;
+
+      if (length && width && height && cartonQty) {
+        const cbm = (length * width * height * cartonQty) / 1000000;
+        document.getElementById("resultCBM").innerHTML = "CBM: " + cbm.toFixed(3);
+      } else {
+        document.getElementById("resultCBM").innerHTML = "Please enter all dimensions and carton quantity.";
+      }
+    }
+
+    function calculateCBF() {
+      const lengthInches = document.getElementById("lengthInches").value;
+      const widthInches = document.getElementById("widthInches").value;
+      const heightInches = document.getElementById("heightInches").value;
+      const cartonQty = document.getElementById("cartonQty").value;
+
+      if (lengthInches && widthInches && heightInches && cartonQty) {
+        const cbf = (lengthInches * widthInches * heightInches * cartonQty) / 1728;
+        document.getElementById("resultCBF").innerHTML = "CBF: " + cbf.toFixed(3);
+      } else {
+        document.getElementById("resultCBF").innerHTML = "Please enter all dimensions and carton quantity.";
+      }
+    }
+  </script>
+
+<div class="col-md-6 my-2">
+  <div class="box">
+    <div class="box-content">
+      <div class="text-center">
+        <h4>Formula for Dimensional Weight Calculation (Volumetric Kg)</h4>
+        <p class="text-left">
+		
+<b> International Air Transport Associations (IATA)</b><br>
+
+         The formula:  ( L x W x H, in centimetres ) / 6,000 )<br>
+         The formula:  ( L x W x H, in inch ) / 366.1414 )<br><br>
+
+		<b>DHL </b><br>
+         The formula:  ( L x W x H, in centimetres ) / 6,000 )<br>
+         The formula:  ( L x W x H, in inch ) / 366.1414 )<br><br>
+
+			<b>UPS</b><br>
+		The formula:  ( L x W x H, in centimetres ) / 5,000 )<br>
+         The formula:  ( L x W x H, in Inch ) / 366.1414 )<br><br>
+
+		<b>FedEx</b><br>
+		The formula:  ( L x W x H, in centimetres ) / 5,000 )<br>
+            The formula:  ( L x W x H, in inch ) / 306.5 )<br><br>
+		<b>Royale</b><br>
+
+ The formula:  ( L x W x H, in centimetres ) / 5,000 )<br>
+            The formula:  ( L x W x H, in inch ) / 366.1414 )</p>
+
+
+
+		
+		
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  <div class="col-md-6 my-2">
+        <div class="box">
+          <div class="box-content">
+            <div class="d-flex flex-column justify-content-between h-100">
+              <div class="text-center">
+                <h3>Dimensional Weight Calculation (Volumetric Kg)</h3>
+                <div class="form-group">
+                  <label for="unit">Select Unit:</label>
+                  <select class="form-control" id="dunit" onchange="changeUnit()">
+                    <option value="cm" selected>Centimeters (cm)</option>
+                    <option value="inch">Inches (inch)</option>
+                  </select>
+                  <label for="length">Length:</label>
+                  <input type="number" class="form-control" id="dlength" step="0.01" required>
+                  <label for="width">Width:</label>
+                  <input type="number" class="form-control" id="dwidth" step="0.01" required>
+                  <label for="height">Height:</label>
+                  <input type="number" class="form-control" id="dheight" step="0.01" required>
+                </div>
+                <button class="btn btn-primary" onclick="calculateDimensionalWeight()">Calculate</button>
+                <div id="result" class="mt-4"></div>
+                <div id="fedexResult" class="mt-2"></div>
+                <div id="upsResult" class="mt-2"></div>
+                <div id="dhlResult" class="mt-2"></div>
+				<div id="royaleResult" class="mt-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  <script>
+    function calculateDimensionalWeight() {
+      var length = parseFloat(document.getElementById("dlength").value);
+      var width = parseFloat(document.getElementById("dwidth").value);
+      var height = parseFloat(document.getElementById("dheight").value);
+      var unit = document.getElementById("dunit").value;
+      var dimensionalWeight;
+      var fedexDimensionalWeight;
+      var upsDimensionalWeight;
+      var dhlDimensionalWeight;
+	  var royaleDimensionalWeight;
+
+      if (unit === "cm") {
+        dimensionalWeight = (length * width * height) / 6000;
+        fedexDimensionalWeight = (length * width * height) / 5000;
+        upsDimensionalWeight = (length * width * height) / 5000;
+        dhlDimensionalWeight = (length * width * height) / 6000;
+		royaleDimensionalWeight = (length * width * height) / 5000;
+      } else if (unit === "inch") {
+        dimensionalWeight = (length * width * height) / 366.1424;
+        fedexDimensionalWeight = (length * width * height) / 306.5;
+        upsDimensionalWeight = (length * width * height) / 366.1424;
+        dhlDimensionalWeight = (length * width * height) / 366.1424;
+		royaleDimensionalWeight = (length * width * height) / 366.1424;
+      }
+
+      var resultElement = document.getElementById("result");
+      resultElement.innerHTML = "<strong>IATA Dimensional Weight:</strong> " + dimensionalWeight.toFixed(2) + " kg";
+
+      var fedexResultElement = document.getElementById("fedexResult");
+      fedexResultElement.innerHTML = "<strong>FedEx Dimensional Weight:</strong> " + fedexDimensionalWeight.toFixed(2) + " kg";
+
+      var upsResultElement = document.getElementById("upsResult");
+      upsResultElement.innerHTML = "<strong>UPS Dimensional Weight:</strong> " + upsDimensionalWeight.toFixed(2) + " kg";
+
+      var dhlResultElement = document.getElementById("dhlResult");
+      dhlResultElement.innerHTML = "<strong>DHL Dimensional Weight:</strong> " + dhlDimensionalWeight.toFixed(2) + " kg";
+	  
+	  var royaleResultElement = document.getElementById("royaleResult");
+      royaleResultElement.innerHTML = "<strong>Royale International Dimensional Weight:</strong> " + royaleDimensionalWeight.toFixed(2) + " kg";
+    }
+
+    function changeUnit() {
+      var unit = document.getElementById("unit").value;
+      var lengthElement = document.getElementById("length");
+      var widthElement = document.getElementById("width");
+      var heightElement = document.getElementById("height");
+
+      if (unit === "cm") {
+        lengthElement.placeholder = "Length in CM";
+        widthElement.placeholder = "Width in CM";
+        heightElement.placeholder = "Height in CM";
+      } else if (unit === "inch") {
+        lengthElement.placeholder = "Length in Inch";
+        widthElement.placeholder = "Width in Inch";
+        heightElement.placeholder = "Height in Inch";
+      }
+    }
+  </script>
+  </div>
+ 
+    <section class="contact-details" id="contact-details-section">
+        <div class="row text-center text-md-left">
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <img src="images/logo.png" alt="" class="pb-2">
+            <div class="pt-2">
+              <p class="text-muted m-0">ClothCalc@gmail.com</p>
+              <p class="text-muted m-0"></p>
+            </div>         
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+			  <a href="fabricconverter"><p class="m-0 pt-1 pb-2"> Fabric Converter </p></a>
+              <a href="PriceConverter"><p class="m-0 pt-1 pb-2"> Fabric Price Converter</p></a>
+              <a href="gsmcalculate"><p class="m-0 pt-1 pb-2"> GSM Converter</p></a>
+              <a href="unitconverter"><p class="m-0 pt-1 pb-2">Unit Converter </p></a>
+              <a href="cartoncalc"><p class="m-0 pt-1 pb-2"> Carton Calculator </p></a>
+              <a href="zippercalc"><p class=">m-0 pt-1 pb-2">Zipper Calculation </p></a>
+   
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+            <h5 class="pb-2">Important Links</h5>
+            <a href="#"><p class="m-0 pb-2">Terms</p></a>   
+            <a href="#"><p class="m-0 pt-1 pb-2">Privacy policy</p></a> 
+            <a href="#"><p class="m-0 pt-1 pb-2">Cookie Policy</p></a> 
+            <a href="#"><p class="m-0 pt-1">Discover</p></a> 
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 grid-margin">
+              <h5 class="pb-2">Telegram Knowledge Sharing Group</h5>
+              <p class="text-muted">Merchandising Group Study</p>
+          </div>
+        </div>  
+      </section>
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright <a href="https://www.fb.com/shaharia63" class="px-1">Shaharia</a>All rights reserved.</p>
+      </footer>
+      
+  </div>
+  </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+
+</body>
+</html>
